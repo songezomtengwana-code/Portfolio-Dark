@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #fff;
+    --background: #272727;
+    --gentle-color: #d0d0d0;
+    --light-color: #b8b8b8;
+    --nd-light: #888888;  
+    --sec-color: #01cc6d;
+    --color: #f8f9fa;
+    --dark: #000704;
+    --dark-background: #1c1c1c;
+}
+
+@media (max-width: 630px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .landing {
+        width: 100%;
+        top: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        animation-name: cell-land;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes cell-land {
+        0% {
+           opacity: 0; 
+           transform: scale(0);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.5);
+        }
+    }
+
+    .landing > .props {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .landing .props > .mainwatermark {
+        display: none;
+    }
+
+    .landing > .props > .brandname {
+        margin: 0;
+        width: 100%;
+        animation-name: unset;
+        animation-duration: unset;
+    }
+
+    .main > h1 {
+        animation-name: unset;
+        animation-duration: unset;
+    }
+
+    .sub > p {
+        animation-name: unset;
+        animation-duration: unset;
+    }
+
+    .read {
+        display: none;
+    }
+
+    #move {
+        margin: 20px auto 0 auto;
+        opacity: 1;
+        width: max-content;
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        animation-name: updown;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes updown {
+        0% {
+            padding-top: 20px;
+        }
+
+    }
+
+    #move a {
+        background: var(--sec-color);
+        color: var(--dark-background);
+        padding: 0.5em 0.9em;
+        border-radius: 50%;
+        text-decoration: none;
+        font-weight: 900;
+        transform: rotate(90deg);
+    }
+
+    .move-scrolled {
+        display: none;
+    }
+
+    .landing > .props > #dev-ill {
+        display: none;
+    }
+
+    #navbar {
+       display: none;
+    }
+
+    #cell-nav {
+        padding: 0.5em 2em;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: var(--sec-color);
+        color: var(--dark-background);
+    }
+
+    #cell-brand {
+        line-height: 1.4;
+    }
+
+    #ham-icon {
+        margin: 0 10px;
+        float: right;
+        font-weight: 900;
+        cursor: pointer;
+    }
+
+    #ham-icon:hover {
+        color: #000000;
+    }
+
+    .fa {
+        color: var(--color);
+        font-size: 50px;
+    }
+
+    .fa:hover {
+        color:var(--sec-color);
+    }
+
+    #esc:hover {
+        color: var(--sec-color);
+    }
+
+    .card {
+        padding: 0;
+        margin: 30px 0;
+    }
+
+    .card > .icon {
+        display: none;
+    }
+
+    .card > .right-icon {
+        display: none!important;
+    }
+
+    .right {
+        text-align: left!important;
+    }
+
+    .information {
+        width: 90%;
+    }
+
+    .box {
+        padding: 0.5em 1em;
+        width: 100%;
+    }
+
+    .box button {
+        margin: 0 0 10px 0;
+    }
+
+}
+
+@media (max-width: 980px) {
+    
+}
+
+@media (min-width: 630px) {
+    #cell-nav {
+        display: none;
+    }
+
+    #move {
+        display: none;
+    }
+}
